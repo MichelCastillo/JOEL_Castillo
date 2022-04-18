@@ -5,14 +5,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/new-styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./css/bootstrap-photos/bootstrap-photos.css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
   <title>I ♥ Bulldogs</title>
 </head>
 
 <body>
+
+  <!-- ====== TOP NAV BAR ====== -->
+
   <div class="grid-container">
-    <nav id="image" class="grid-nav">
+    <nav id="image">
       <div class="main_list">
         <ul class="grid-nav-main navlinks quick-sand-family">
           <li><a class="li-excluded-logo pulse_efect" href="#"><img class="nav-img" src="./media/logo.png"
@@ -31,144 +40,183 @@
         </div>
       </div>
     </nav>
+  </div> <!-- ====== TOP NAV BAR END ====== -->
 
-    <!-- HEADER -->
+  <!-- ====== CAROUSEL JOEL ====== -->
 
-    <header class="grid-box teaser quick-sand-family joel-life-animation">
-        <h1 class="joel-life-header">
-          <span>J</span><span>O</span><span>E</span><span>L</span><span>'</span><span>S</span> <span> 
-          <span>L</span><span>I</span><span>F</span><span>E</span>
-        </h1>
-    </header>
-
-    <!-- HEADER END -->
-
-    <!-- MAIN -->
-
-    <main class="grid-box">
-      <h2 class="quick-sand-family h2_main main_title">Joel's History</h2>
-      <div class="video-media-youtube quick-sand-family">
-        <ul class="video__container">
-          <li class="li_main video__content">
-            <ul class="video-media-youtube-inner">
-              <li class="li_main media__embed">
-                <h3 class="h3_main">Hola ! Mi nombre es Joel !</h3>
-                <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic iste itaque ratione quas quae,
-                    nesciunt officiis doloremque ipsa tempora laborum non atque optio dolorem amet? Debitis beatae
-                    impedit ut minus!
-                    Fugit corrupti ab dolore id voluptatum magni temporibus voluptas modi explicabo beatae voluptates
-                    libero ad accusamus iusto iste optio voluptate, et quo, neque eum facere quasi sit illum fuga.
-                    Dignissimos.
-                    Eligendi saepe, corrupti ex exercitationem nostrum eum porro quisquam itaque nemo ea ipsam, optio
-                    consequuntur tempora quos molestiae a vero nihil reiciendis! Labore inventore, accusamus
-                  </p>
-                </div>
-              </li>
-
-              <li class="li_main media__embed">
-                <h3 class="h3_main">Aquí te dejo un video de mi casa :)</h3>
-                <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/Jv-OgYw2ums"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-                </div>
-              </li>
-            </ul>
-          </li>
-      </div>
-    </main>
-
-    <!-- MAIN END -->
-
-    <!-- ASIDE -->
-
-    <aside class="grid-box quick-sand-family">
-      <h2>Joel's profile</h2>
-      <div class="card">
-        <img src="./media/Bulldogtribe-Ettore-perfil.jpg" alt="Person" class="card__image card__image_profile">
-        <p class="card__name">Joel Castillo</p>
-        <div class="grid-container-aside">
-
-          <div class="grid-child-posts">
-            <b>Género: </b> Macho
-          </div>
-
-          <div class="grid-child-followers">
-            <b>Edad:</b> 1 año
-          </div>
-
+  <header class="grid-box teaser quick-sand-family joel-life-animation">
+    <h1 class="joel-life-header">
+      <span>J</span><span>O</span><span>E</span><span>L</span><span>'</span><span>S</span> <span>
+        <span>L</span><span>I</span><span>F</span><span>E</span>
+    </h1>
+    <!-- CAROUSEL -->
+    <section id="carouselHeader">
+      <div id="carouselJoel" data-bs-interval="5000" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselJoel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Photo 1"></button>
+          <button type="button" data-bs-target="#carouselJoel" data-bs-slide-to="1" aria-label="Photo 2"></button>
+          <button type="button" data-bs-target="#carouselJoel" data-bs-slide-to="2" aria-label="Photo 3"></button>
         </div>
-        <ul>
-          <li>Nombre dueño: NOMBRE</li>
-          <li>Dirección: DIRECCION</li>
-          <li>Teléfono: TELEFONO</li>
-          <li>Comida favorita: COMIDA</li>
-        </ul>
-        <button class="btn-message">Send me a message!</button>
+        <div class="carousel-inner" role="listbox">
+
+          <!-- IMAGEN 1 -->
+          <div class="carousel-item active" data-bs-interval="10000"
+            style="background-image: url(./media/bulldog-fullhd/QxNgiVD-english-bulldog-wallpaper.jpg)">
+            <div class="carousel-div">
+              <div class="container">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Hola ! Mi nombre es Joel :)</h5>
+                  <p>Y estoy muy contento de que estés aquí !</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- IMAGEN 2 -->
+          <div class="carousel-item" data-bs-interval="5000"
+            style="background-image: url(./media/bulldog-fullhd/8545322.jpg)">
+            <div class="carousel-div">
+              <div class="container">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Hola ! Mi nombre es Joel :)</h5>
+                  <p>Y estoy muy contento de que estés aquí !</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- IMAGEN 3 -->
+          <div class="carousel-item" style="background-image: url(./media/bulldog-fullhd/wp1867721.jpg)">
+            <div class="carousel-div">
+              <div class="container">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Hola ! Mi nombre es Joel :)</h5>
+                  <p>Y estoy muy contento de que estés aquí !</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PREV BTN -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselJoel" data-bs-slide="prev">
+          <span class="carousel-control-prev-photo bi bi-chevron-left" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <!-- NEXT BTN -->
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselJoel" data-bs-slide="next">
+          <span class="carousel-control-next-photo bi bi-chevron-right" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </aside>
+    </section>
+  </header><!-- ====== CAROUSEL JOEL END ====== -->
 
-    <!-- ASIDE END -->
+  <!-- ====== MAIN ====== -->
 
-    <!-- PHOTO GALLERY -->
+  <main class="grid-box">
+    <h2 class="quick-sand-family h2_main main_title">Joel's History</h2>
+    <div class="video-media-youtube quick-sand-family">
+      <ul class="video__container">
+        <li class="li_main video__content">
+          <ul class="video-media-youtube-inner">
+            <li class="li_main media__embed">
+              <h3 class="h3_main">Hola ! Mi nombre es Joel !</h3>
+              <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic iste itaque ratione quas quae,
+                  nesciunt officiis doloremque ipsa tempora laborum non atque optio dolorem amet? Debitis beatae
+                  impedit ut minus!
+                  Fugit corrupti ab dolore id voluptatum magni temporibus voluptas modi explicabo beatae voluptates
+                  libero ad accusamus iusto iste optio voluptate, et quo, neque eum facere quasi sit illum fuga.
+                  Dignissimos.
+                </p>
+              </div>
+            </li>
 
-    <div class="grid-box photos">
-      <div class="quick-sand-family">
-        <h2 class="h2_main main_title">Galería</h2>
+            <li class="li_main media__embed">
+              <h3 class="h3_main">Aquí te dejo un video de mi casa :)</h3>
+              <div class="video-media-youtube-inner-vi video-media-youtube-inner-vi--ratio">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Jv-OgYw2ums"
+                  title="YouTube video player" frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+              </div>
+            </li>
+          </ul>
+        </li>
+    </div>
+  </main> <!-- ====== MAIN END ====== -->
+
+  <!-- ======= MY BROTHERS ======= -->
+  <section id="my-brothers" class="my-brothers section-bg">
+    <div class="container">
+
+      <div class="my-brothers-title mouseover">
+        <h2>MY BROTHERS <i class="fas fa-dog fa-spin" style="font-size:30px"></i></h2>
       </div>
-      <div class="gallery gallery_container">
-        <div><img class="zoom-in-animation" src="./media/logo-bulldogs.png" alt></div>
-        <div><img class="zoom-in-animation" src="./media/logo-bulldogs.png" alt></div>
-        <div><img class="zoom-in-animation" src="./media/logo-bulldogs.png" alt></div>
-        <div><img class="zoom-in-animation" src="./media/logo-bulldogs.png" alt></div>
+
+      <div class="row no-gutters">
+        <div class="col-lg-4 col-md-6">
+          <div class="photo-box">
+            <div class="photo mouseover"><img src="./media/bulldog-fullhd/more.jpeg" alt=""></div>
+            <h4 class="title"><a href="">Morena Castillo</a></h4>
+            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio tempore dolores sequi
+              autem voluptate perspiciatis fuga eius!</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="photo-box">
+            <div class="photo mouseover"><img src="./media/bulldog-fullhd/malevo.jpeg" alt=""></div>
+            <h4 class="title"><a href="">Balboa Castillo</a></h4>
+            <p class="description">Suscipit odio sit molestias voluptates perferendis. Tempore quod inventore commodi
+              nam sapiente.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <div class="photo-box">
+            <div class="photo mouseover"><img src="./media/bulldog-fullhd/gringo.jpeg" alt=""></div>
+            <h4 class="title"><a href="">Apolo Castillo</a></h4>Lorem ipsum dolor sit, amet consectetur adipisicing
+            elit. dicta, officiis quo id quidem </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section><!-- ======= MY BROTHERS END ======= -->
+
+  <!-- ======= PHOTO GALLERY ======= -->
+  <div class="grid-box photos">
+    <div class="quick-sand-family">
+      <h2 class="h2_main main_title">Galería</h2>
+    </div>
+    <div class="gallery gallery_container">
+      <div><img class="zoom-in-animation" src="./media/logo-bulldogs.png" alt></div>
+      <div><img class="zoom-in-animation" src="./media/logo-bulldogs.png" alt></div>
+      <div><img class="zoom-in-animation" src="./media/logo-bulldogs.png" alt></div>
+      <div><img class="zoom-in-animation" src="./media/logo-bulldogs.png" alt></div>
+    </div>
+  </div><!-- ======= PHOTO GALLERY END ======= -->
+
+  <!-- ======= FOOTER ======= -->
+  <footer id="footer">
+    <div class="container">
+      <h3>Siguenos en nuestras redes !</h3>
+      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <div class="social-links">
+        <a href="#" class="twitter mouseover"><i class="bx bxl-twitter"></i></a>
+        <a href="#" class="facebook mouseover"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram mouseover"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google mouseover"><i class="bx bxl-google"></i></a>
+      </div>
+      <div class="copyright">
+        &copy; Copyright <strong><span>I ♥ Bulldogs</span></strong>. All Rights Reserved
       </div>
     </div>
-  
-    <!-- PHOTO GALLERY END -->
-
-    <!-- FOOTER -->
-
-    <footer class="grid-box sub-grid">
-      <h2 class="h2_footer">Siguenos en nuestras redes sociales !</h2>
-      <div class="sub-grid-box footer-box-1">
-        <a href="https://www.facebook.com/" class="fa fa-facebook" target="_blank"></a>
-      </div>
-      <div class="sub-grid-box footer-box-2">
-        <a href="https://www.twitter.com/" class="fa fa-twitter" target="_blank"></a>
-      </div>
-      <div class="sub-grid-box footer-box-3">
-        <a href="https://www.instagram.com/" class="fa fa-instagram" target="_blank"></a>
-      </div>
-      <div class="sub-grid-box footer-box-4">
-        <a href="https://www.google.com/" class="fa fa-google" target="_blank"></a>
-      </div>
-    </footer>
-    </div>
-
-    <!-- FOOTER END -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-      <script>
-        $(window).scroll(function () {
-          if ($(document).scrollTop() > 50) {
-            $(".nav").addClass("scroll-oscurecer");
-            $(".texto-centrado").addClass("desaparecer-texto");
-            console.log("Navbar negro");
-          } else {
-            $(".nav").removeClass("scroll-oscurecer");
-            $(".texto-centrado").removeClass("desaparecer-texto");
-            console.log("Navbar negro deshabilitado");
-          }
-        });
-  
-        function volverNormalidad() {
-          $(".nav-img").addClass("volver-normalidad");
-          console.log("Volviendo a la normalidad lento...");
-        }
-      </script>
+  </footer><!-- ======= FOOTER ======= -->
+  <script src="./js/bootstrap.min.js"></script>
 
 </body>
 
