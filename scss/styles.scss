@@ -1,6 +1,24 @@
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
 @import '_variables.scss';
 @import '_animations.scss';
+@import '_colors.scss';
+@import '_imageReferences.scss';
+@import url(https://fonts.googleapis.com/css?family=Signika:700,300,600);
+
+// MIXINS
+
+@mixin sizes($height, $width) {
+
+	@if $height == 'auto' {
+		width: $width;
+	} @else if $width == 'auto'{
+		height: $height;
+	} @else {
+		height: $height;
+		width: $width;
+	}
+}
+
 /*--------------------------------------------------------------
 # ALL STYLES
 --------------------------------------------------------------*/
@@ -77,7 +95,7 @@ footer {
 	line-height: 1;
 	text-align: center;
 	text-decoration: none;
-	color: white;
+	color: $secondaryColor;
 	transition: all .5s ease;
     font-weight: bold;
     font-size: 1.2rem;
@@ -138,13 +156,23 @@ footer {
 --------------------------------------------------------------*/
 
 /* NAV IMAGE LOGO STYLE */
-#image {
-	width: 100%;
-	height: 100vh;
-	background-image: url("../media/joel.jpg");
+.image-nav{
+	@include sizes(100vh, 100%);
 	background-position: center top;
 	background-size: cover;
 	margin-bottom: 0;
+}
+
+
+.image-index {
+	@extend .image-nav;
+	background-image: url(map-get($urls, indexImage));
+	
+}
+
+.image-contact-us{
+	@extend .image-nav;
+	background-image: url(map-get($urls, contactUsImage)) !important;
 }
 
 /* TEXTO WELCOME STYLE */
@@ -156,8 +184,8 @@ footer {
 }
 
 .texto-centrado {
-   background-color: #00E678;
-   color: white;
+   background-color: $primaryColor;
+   color: $secondaryColor;
    padding: 40px;
    opacity: 0.7;
    font-size: 40px
@@ -178,7 +206,25 @@ footer {
  /* BACKGROUND */
  
  .teaser {
-     background-image: linear-gradient(135deg, #ffe182 0, #ffe279 6.25%, #ffe371 12.5%, #fbe369 18.75%, #e8e262 25%, #d4e15c 31.25%, #bddf58 37.5%, #a3dc56 43.75%, #86d855 50%, #64d457 56.25%, #32d05d 62.5%, #00cc65 68.75%, #00c870 75%, #00c57c 81.25%, #00c18a 87.5%, #00bf9a 93.75%, #00bcaa 100%);
+     background-image: linear-gradient(135deg, 
+	 					  $color1,
+						  $color2
+						  $color3
+						  $color4
+						  $color5
+						  $color6
+						  $color7
+						  $color8
+						  $color9
+						  $color10
+						  $color11
+						  $color12
+						  $color13
+						  $color14
+						  $color15
+						  $color16
+						  $color17
+	 );
      opacity: 0.7;
      color: #E5E5E5;
  }
@@ -200,7 +246,6 @@ footer {
  
  /* STYLE */
  
- @import url(https://fonts.googleapis.com/css?family=Signika:700,300,600);
  .joel-life-animation {
    text-align:center;
    overflow:hidden;
@@ -226,8 +271,7 @@ footer {
 
 /* STYLE */
 #carouselHeader {
-	width: 100%;
-	height: 70vh;
+	@include sizes(80vh, 100%);
 	background-color: rgba(9, 9, 9, 0.8);
 	overflow: hidden;
 	position: relative;
@@ -250,14 +294,14 @@ footer {
 		text-align: center;
 	}
 	h5 {
-		color: $main-color;
-		-webkit-text-stroke: 2px rgb(20, 186, 67);
+		color: $primaryColor;
+		-webkit-text-stroke: 2px $primaryColor;
 		margin-bottom: 20px;
 		font-size: 48px;
 		font-weight: 700;
 	}
 	p {
-		color: #ffffff;
+		color: $secondaryColor;
 		-webkit-text-stroke: 2px rgb(0, 0, 0);
 		-webkit-animation-delay: 0.4s;
 		font-size: xx-large;
@@ -277,24 +321,21 @@ footer {
 	position: absolute;
 }
 #carouselHeader .carousel-control-next-photo, #carouselHeader .carousel-control-prev-photo {
+	@include sizes(auto, auto);
 	background: none;
 	font-size: 30px;
 	line-height: 0;
-	width: auto;
-	height: auto;
 	background: rgba(255, 255, 255, 0.2);
 	border-radius: 50px;
 	transition: 0.3s;
-	color: rgba(255, 255, 255, 0.5);
-	width: 54px;
-	height: 54px;
+	color: $secondaryColor;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 #carouselHeader .carousel-control-next-photo:hover, #carouselHeader .carousel-control-prev-photo:hover {
 	background: rgba(255, 255, 255, 0.3);
-	color: rgba(255, 255, 255, 0.8);
+	color: $secondaryColor;
 }
 /* MEDIA QUERY */
 @media (max-width: 992px) {
@@ -320,7 +361,7 @@ footer {
 
 @media (max-height: 500px) {
     #carouselHeader {
-      height: 120vh;
+      @include sizes(120vh, auto);
     }
 }
 
@@ -389,8 +430,7 @@ footer {
 		top: 0;
 		left: 0;
 		bottom: 0;
-		width: 100%;
-		height: 100%;
+		@include sizes(100%, 100%);
 	}
 }
 .video-media-youtube-inner-vi--ratio {
@@ -401,8 +441,7 @@ footer {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 100%;
-    height: 100%;
+    @include sizes(100%, 100%);
 }
 
 /* MEDIA QUERY */
@@ -439,7 +478,7 @@ footer {
 		&:hover {
 			.title {
 				a {
-					color: #5cb874;
+					color: $primaryColor;
 				}
 			}
 		}
@@ -455,7 +494,7 @@ footer {
 			margin: 0 0 30px 0;
 		}
 		i {
-			color: #5cb874;
+			color: $primaryColor;
 			font-size: 42px;
 		}
 	}
@@ -480,8 +519,8 @@ footer {
 
 /* STYLE */
 .photos {
-	background-color: #7F7F7F;
-	color: #F2F2F2;
+	background-color: $secondaryColor;
+	color: $secondaryColor;
 }
 .gallery {
 	padding: .5vw;
@@ -498,10 +537,10 @@ footer {
 		-ms-flex: auto;
 		flex: auto;
 		width: 200px;
+		height: auto;
 		margin: .5vw;
 		img {
-			width: 100%;
-			height: auto;
+			@include sizes(100%, 100%);
 		}
 	}
 }
@@ -521,15 +560,15 @@ footer {
 
 /* STYLE */
 #footer {
-	background: $main-color;
-	color: #fff;
+	background: $primaryColor;
+	color: $secondaryColor;
 	font-size: 14px;
 	text-align: center;
 	padding: 30px 0;
 	h3 {
 		font-size: 36px;
 		font-weight: 700;
-		color: #fff;
+		color: $secondaryColor;
 		position: relative;
 		font-family: "Poppins", sans-serif;
 		padding: 0;
@@ -544,17 +583,16 @@ footer {
 	.social-links {
 		margin: 0 0 40px 0;
 		a {
+			@include sizes(50px, 50px);
 			font-size: 18px;
 			display: inline-block;
-			background: #5cb874;
-			color: #fff;
+			background: $primaryColor;
+			color: $secondaryColor;
 			line-height: 1;
 			padding: 8px 0;
 			margin-right: 4px;
 			border-radius: 50%;
 			text-align: center;
-			width: 50px;
-			height: 50px;
 			transition: 0.3s;
 			i {
 				vertical-align: -webkit-baseline-middle;
@@ -567,11 +605,11 @@ footer {
 # Sections General
 --------------------------------------------------------------*/
 section {
-	padding: 60px 0;
+	padding: 30px 0;
 	overflow: hidden;
 }
 .section-bg {
-	background-color: whitesmoke;
+	background-color: $secondaryColor;
 }
 .section-title {
 	text-align: center;
@@ -604,18 +642,18 @@ section {
 	.icon-box {
 		h4 {
 			font-size: 25px;
-			color: white;
+			color: $secondaryColor;
 			font-weight: 700;
 			margin: 5px 0 10px 60px;
 		}
 		i {
 			font-size: 48px;
 			float: left;
-			color: $main-color;
+			color: $primaryColor;
 		}
 		p {
 			font-size: 15px;
-			color: #ffffff;
+			color: $secondaryColor;
 			margin-left: 60px;
 		}
 	}
@@ -667,7 +705,7 @@ section {
 			i {
 				font-size: 24px;
 				padding: 2px 6px 0 0;
-				color: $main-color;
+				color: $primaryColor;
 			}
 		}
 		p {
@@ -692,10 +730,10 @@ section {
 		text-align: center;
 		box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
 		padding: 20px 0 30px 0;
-		background: #fff;
+		background: $secondaryColor;
 		i {
 			font-size: 32px;
-			color: $main-color;
+			color: $primaryColor;
 			border-radius: 50%;
 			padding: 8px;
 			border: 2px dotted #fbdad2;
@@ -716,11 +754,11 @@ section {
 	.contact-form {
 		box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
 		padding: 27.5px;
-		background: #fff;
+		background: $secondaryColor;
 		.error-message {
 			display: none;
-			color: #fff;
-			background: $main-color;
+			color: $secondaryColor;
+			background: $primaryColor;
 			text-align: left;
 			padding: 15px;
 			font-weight: 600;
@@ -732,8 +770,8 @@ section {
 		}
 		.sent-message {
 			display: none;
-			color: #fff;
-			background: #18d26e;
+			color: $secondaryColor;
+			background: $primaryColor;
 			text-align: center;
 			padding: 15px;
 			font-weight: 600;
@@ -743,11 +781,10 @@ section {
 				content: "";
 				display: inline-block;
 				border-radius: 50%;
-				width: 24px;
-				height: 24px;
+				@include sizes(24px, 24px);
 				margin: 0 10px -6px 0;
-				border: 3px solid #18d26e;
-				border-top-color: #eee;
+				border: 3px solid $primaryColor;
+				border-top-color: $secondaryColor;
 				-webkit-animation: enviar-form-esperando 1s linear infinite;
 				animation: enviar-form-esperando 1s linear infinite;
 			}
@@ -759,15 +796,15 @@ section {
 			padding: 12px 15px;
 		}
 		button[type=submit] {
-			background: $main-color;
+			background: $primaryColor;
 			border: 0;
 			padding: 10px 30px;
 			border-radius: 4px;
-			color: #fff;
+			color: $secondaryColor;
 			transition: 0.4s;
 		}
 		button[type=submit]:hover {
-			background: $main-color;
+			background: $primaryColor;
 		}
 	}
 }
@@ -778,5 +815,173 @@ section {
 	border-radius: 4px;
 }
 .contact .contact-form input:focus, .contact .contact-form textarea:focus {
-	border-color: $main-color;
+	border-color: $primaryColor;
+}
+
+/* ///////////////////////////////////////////////////  */
+/* GENERAL CONSIDERATIONS */
+/*--------------------------------------------------------------
+# MAIN
+--------------------------------------------------------------*/
+.general-considerations {
+	.box {
+		padding: 50px 30px;
+		box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+		transition: all ease-in-out 0.3s;
+		background: #1a1814;
+		span {
+			display: block;
+			font-size: 28px;
+			font-weight: 700;
+			color: $primaryColor;
+		}
+		h4 {
+			font-size: 28px;
+			font-weight: 600;
+			padding: 0;
+			margin: 20px 0;
+			color: $primaryColor;
+		}
+		p {
+			color: #aaaaaa;
+			font-size: 30px;
+			margin: 0;
+			padding: 0;
+		}
+		&:hover {
+			background: $primaryColor;
+			animation-delay: 5ms;
+			padding: 30px 30px 70px 30px;
+			box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
+			span {
+				color: $secondaryColor;
+			}
+			h4 {
+				color: $secondaryColor;
+			}
+			p {
+				color: $secondaryColor;
+			}
+			.consideration-item {
+				display: block;
+				animation-delay: 10ms;
+			}
+			.consideration-subtitle {
+				font-weight: bold;
+				animation-delay: 10ms;
+			}
+		}
+	}
+	.consideration-item {
+		display: none;
+		width: auto;
+		max-height: 20cm;
+	}
+}
+
+.general-considerations-image {
+	background-image: url(map-get($urls, considerationsImage)) !important;
+}
+
+.main-background {
+	background: url(map-get($urls, mainImage));
+	background-size: cover;
+	position: relative;
+	padding: 80px 0;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	color: white;
+	&:before {
+		content: "";
+		background: rgba(0, 0, 0, 0.4);
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		left: 0;
+		right: 0;
+		h3 {
+			color: $secondaryColor;
+		}
+	}
+}
+
+@media (min-width: 1024px) {
+	.main-background {
+		background-attachment: fixed;
+	}
+}
+
+// Map
+@import "https://fonts.googleapis.com/css?family=Montserrat:300";
+.urgencia-veterinaria {
+	text-align: center;
+	color: rgb(221, 9, 9);
+	font-weight: bold;
+	font-size: 32px;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	-webkit-transform: translate3d(0,0,0);
+	display: inline-block;
+	overflow: hidden;
+	white-space: nowrap;
+	&:first-of-type {
+		animation: showup 7s infinite;
+	}
+	&:last-of-type {
+		width: 0px;
+		animation: reveal 7s infinite;
+		span {
+			margin-left: -255px;
+			animation: slidein 7s infinite;
+		}
+	}
+}
+
+@keyframes showup {
+	0% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 1;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes slidein {
+	0% {
+		margin-left: -255px;
+	}
+	20% {
+		margin-left: -255px;
+	}
+	35% {
+		margin-left: 0px;
+	}
+	100% {
+		margin-left: 0px;
+	}
+}
+@keyframes reveal {
+	0% {
+		opacity: 0;
+		width: 0px;
+	}
+	20% {
+		opacity: 1;
+		width: 0px;
+	}
+	30% {
+		width: 255px;
+	}
+	80% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		width: 255px;
+	}
 }

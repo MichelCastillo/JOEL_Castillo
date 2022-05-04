@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,500,700");
 /* GRIDS ANIMATIONS */
 @import url(https://fonts.googleapis.com/css?family=Signika:700,300,600);
+@import "https://fonts.googleapis.com/css?family=Montserrat:300";
 .grid-nav-main a:hover:not(.li-excluded-logo) {
   background-color: white;
   color: #00E676;
@@ -244,7 +245,7 @@ footer {
   line-height: 1;
   text-align: center;
   text-decoration: none;
-  color: white;
+  color: rgba(255, 255, 255, 0.793);
   transition: all .5s ease;
   font-weight: bold;
   font-size: 1.2rem; }
@@ -285,13 +286,18 @@ footer {
 # NAV IMAGE LOGO
 --------------------------------------------------------------*/
 /* NAV IMAGE LOGO STYLE */
-#image {
-  width: 100%;
+.image-nav, .image-index, .image-contact-us {
   height: 100vh;
-  background-image: url("../media/joel.jpg");
+  width: 100%;
   background-position: center top;
   background-size: cover;
   margin-bottom: 0; }
+
+.image-index {
+  background-image: url("../media/joel.jpg"); }
+
+.image-contact-us {
+  background-image: url("../media/bulldog-contact.jpg") !important; }
 
 /* TEXTO WELCOME STYLE */
 .centrado {
@@ -302,7 +308,7 @@ footer {
 
 .texto-centrado {
   background-color: #00E678;
-  color: white;
+  color: rgba(255, 255, 255, 0.793);
   padding: 40px;
   opacity: 0.7;
   font-size: 40px; }
@@ -318,7 +324,7 @@ footer {
 
 /* BACKGROUND */
 .teaser {
-  background-image: linear-gradient(135deg, #ffe182 0, #ffe279 6.25%, #ffe371 12.5%, #fbe369 18.75%, #e8e262 25%, #d4e15c 31.25%, #bddf58 37.5%, #a3dc56 43.75%, #86d855 50%, #64d457 56.25%, #32d05d 62.5%, #00cc65 68.75%, #00c870 75%, #00c57c 81.25%, #00c18a 87.5%, #00bf9a 93.75%, #00bcaa 100%);
+  background-image: linear-gradient(135deg, #ffe182 0, #ffe279 6.25% #ffe371 12.5% #fbe369 18.75% #e8e262 25% #d4e15c 31.25% #bddf58 37.5% #a3dc56 43.75% #86d855 50% #64d457 56.25% #32d05d 62.5% #00cc65 68.75% #00c870 75% #00c57c 81.25% #00c18a 87.5% #00bf9a 93.75% #00bcaa 100%);
   opacity: 0.7;
   color: #E5E5E5; }
 
@@ -354,8 +360,8 @@ footer {
 --------------------------------------------------------------*/
 /* STYLE */
 #carouselHeader {
+  height: 80vh;
   width: 100%;
-  height: 70vh;
   background-color: rgba(9, 9, 9, 0.8);
   overflow: hidden;
   position: relative; }
@@ -373,13 +379,13 @@ footer {
   #carouselHeader .container {
     text-align: center; }
   #carouselHeader h5 {
-    color: #00E676;
-    -webkit-text-stroke: 2px #14ba43;
+    color: #00E678;
+    -webkit-text-stroke: 2px #00E678;
     margin-bottom: 20px;
     font-size: 48px;
     font-weight: 700; }
   #carouselHeader p {
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.793);
     -webkit-text-stroke: 2px black;
     -webkit-animation-delay: 0.4s;
     font-size: xx-large;
@@ -398,24 +404,21 @@ footer {
   position: absolute; }
 
 #carouselHeader .carousel-control-next-photo, #carouselHeader .carousel-control-prev-photo {
+  width: auto;
   background: none;
   font-size: 30px;
   line-height: 0;
-  width: auto;
-  height: auto;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50px;
   transition: 0.3s;
-  color: rgba(255, 255, 255, 0.5);
-  width: 54px;
-  height: 54px;
+  color: rgba(255, 255, 255, 0.793);
   display: flex;
   align-items: center;
   justify-content: center; }
 
 #carouselHeader .carousel-control-next-photo:hover, #carouselHeader .carousel-control-prev-photo:hover {
   background: rgba(255, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 0.8); }
+  color: rgba(255, 255, 255, 0.793); }
 
 /* MEDIA QUERY */
 @media (max-width: 992px) {
@@ -499,8 +502,8 @@ footer {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 100%;
-    height: 100%; }
+    height: 100%;
+    width: 100%; }
 
 .video-media-youtube-inner-vi--ratio {
   padding-bottom: 75%; }
@@ -510,8 +513,8 @@ footer {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 100%;
-  height: 100%; }
+  height: 100%;
+  width: 100%; }
 
 /* MEDIA QUERY */
 @media only screen and (min-width: 1024px) {
@@ -535,7 +538,7 @@ footer {
     padding: 20px;
     text-align: center; }
     .my-brothers .photo-box:hover .title a {
-      color: #5cb874; }
+      color: #00E678; }
   .my-brothers .photo-box-bg {
     background-image: linear-gradient(0deg, #222222 0%, #2f2f2f 50%, #222222 100%); }
   .my-brothers .photo {
@@ -545,7 +548,7 @@ footer {
       border-radius: 50%;
       margin: 0 0 30px 0; }
     .my-brothers .photo i {
-      color: #5cb874;
+      color: #00E678;
       font-size: 42px; }
   .my-brothers .title {
     font-weight: 700;
@@ -563,8 +566,8 @@ footer {
 --------------------------------------------------------------*/
 /* STYLE */
 .photos {
-  background-color: #7F7F7F;
-  color: #F2F2F2; }
+  background-color: rgba(255, 255, 255, 0.793);
+  color: rgba(255, 255, 255, 0.793); }
 
 .gallery {
   padding: .5vw;
@@ -581,10 +584,11 @@ footer {
     -ms-flex: auto;
     flex: auto;
     width: 200px;
+    height: auto;
     margin: .5vw; }
     .gallery div img {
-      width: 100%;
-      height: auto; }
+      height: 100%;
+      width: 100%; }
 
 /* MEDIA QUERY */
 @media screen and (max-width: 400px) {
@@ -598,15 +602,15 @@ footer {
 --------------------------------------------------------------*/
 /* STYLE */
 #footer {
-  background: #00E676;
-  color: #fff;
+  background: #00E678;
+  color: rgba(255, 255, 255, 0.793);
   font-size: 14px;
   text-align: center;
   padding: 30px 0; }
   #footer h3 {
     font-size: 36px;
     font-weight: 700;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.793);
     position: relative;
     font-family: "Poppins", sans-serif;
     padding: 0;
@@ -619,17 +623,17 @@ footer {
   #footer .social-links {
     margin: 0 0 40px 0; }
     #footer .social-links a {
+      height: 50px;
+      width: 50px;
       font-size: 18px;
       display: inline-block;
-      background: #5cb874;
-      color: #fff;
+      background: #00E678;
+      color: rgba(255, 255, 255, 0.793);
       line-height: 1;
       padding: 8px 0;
       margin-right: 4px;
       border-radius: 50%;
       text-align: center;
-      width: 50px;
-      height: 50px;
       transition: 0.3s; }
       #footer .social-links a i {
         vertical-align: -webkit-baseline-middle; }
@@ -638,11 +642,11 @@ footer {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+  padding: 30px 0;
   overflow: hidden; }
 
 .section-bg {
-  background-color: whitesmoke; }
+  background-color: rgba(255, 255, 255, 0.793); }
 
 .section-title {
   text-align: center;
@@ -669,18 +673,18 @@ section {
 
 .services .icon-box h4 {
   font-size: 25px;
-  color: white;
+  color: rgba(255, 255, 255, 0.793);
   font-weight: 700;
   margin: 5px 0 10px 60px; }
 
 .services .icon-box i {
   font-size: 48px;
   float: left;
-  color: #00E676; }
+  color: #00E678; }
 
 .services .icon-box p {
   font-size: 15px;
-  color: #ffffff;
+  color: rgba(255, 255, 255, 0.793);
   margin-left: 60px; }
 
 .services .image {
@@ -720,7 +724,7 @@ section {
   .about-us .about-us-title ul i {
     font-size: 24px;
     padding: 2px 6px 0 0;
-    color: #00E676; }
+    color: #00E678; }
 
 .about-us .about-us-title p:last-child {
   margin-bottom: 0; }
@@ -737,10 +741,10 @@ section {
   text-align: center;
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
   padding: 20px 0 30px 0;
-  background: #fff; }
+  background: rgba(255, 255, 255, 0.793); }
   .contact .info-box i {
     font-size: 32px;
-    color: #00E676;
+    color: #00E678;
     border-radius: 50%;
     padding: 8px;
     border: 2px dotted #fbdad2; }
@@ -758,11 +762,11 @@ section {
 .contact .contact-form {
   box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
   padding: 27.5px;
-  background: #fff; }
+  background: rgba(255, 255, 255, 0.793); }
   .contact .contact-form .error-message {
     display: none;
-    color: #fff;
-    background: #00E676;
+    color: rgba(255, 255, 255, 0.793);
+    background: #00E678;
     text-align: left;
     padding: 15px;
     font-weight: 600; }
@@ -770,8 +774,8 @@ section {
       margin-top: 25px; }
   .contact .contact-form .sent-message {
     display: none;
-    color: #fff;
-    background: #18d26e;
+    color: rgba(255, 255, 255, 0.793);
+    background: #00E678;
     text-align: center;
     padding: 15px;
     font-weight: 600; }
@@ -779,11 +783,11 @@ section {
     content: "";
     display: inline-block;
     border-radius: 50%;
-    width: 24px;
     height: 24px;
+    width: 24px;
     margin: 0 10px -6px 0;
-    border: 3px solid #18d26e;
-    border-top-color: #eee;
+    border: 3px solid #00E678;
+    border-top-color: rgba(255, 255, 255, 0.793);
     -webkit-animation: enviar-form-esperando 1s linear infinite;
     animation: enviar-form-esperando 1s linear infinite; }
   .contact .contact-form input {
@@ -791,14 +795,14 @@ section {
   .contact .contact-form textarea {
     padding: 12px 15px; }
   .contact .contact-form button[type=submit] {
-    background: #00E676;
+    background: #00E678;
     border: 0;
     padding: 10px 30px;
     border-radius: 4px;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.793);
     transition: 0.4s; }
   .contact .contact-form button[type=submit]:hover {
-    background: #00E676; }
+    background: #00E678; }
 
 .contact .contact-form input, .contact .contact-form textarea {
   border-radius: 0;
@@ -807,4 +811,134 @@ section {
   border-radius: 4px; }
 
 .contact .contact-form input:focus, .contact .contact-form textarea:focus {
-  border-color: #00E676; }
+  border-color: #00E678; }
+
+/* ///////////////////////////////////////////////////  */
+/* GENERAL CONSIDERATIONS */
+/*--------------------------------------------------------------
+# MAIN
+--------------------------------------------------------------*/
+.general-considerations .box {
+  padding: 50px 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 0.3s;
+  background: #1a1814; }
+  .general-considerations .box span {
+    display: block;
+    font-size: 28px;
+    font-weight: 700;
+    color: #00E678; }
+  .general-considerations .box h4 {
+    font-size: 28px;
+    font-weight: 600;
+    padding: 0;
+    margin: 20px 0;
+    color: #00E678; }
+  .general-considerations .box p {
+    color: #aaaaaa;
+    font-size: 30px;
+    margin: 0;
+    padding: 0; }
+  .general-considerations .box:hover {
+    background: #00E678;
+    animation-delay: 5ms;
+    padding: 30px 30px 70px 30px;
+    box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18); }
+    .general-considerations .box:hover span {
+      color: rgba(255, 255, 255, 0.793); }
+    .general-considerations .box:hover h4 {
+      color: rgba(255, 255, 255, 0.793); }
+    .general-considerations .box:hover p {
+      color: rgba(255, 255, 255, 0.793); }
+    .general-considerations .box:hover .consideration-item {
+      display: block;
+      animation-delay: 10ms; }
+    .general-considerations .box:hover .consideration-subtitle {
+      font-weight: bold;
+      animation-delay: 10ms; }
+
+.general-considerations .consideration-item {
+  display: none;
+  width: auto;
+  max-height: 20cm; }
+
+.general-considerations-image {
+  background-image: url("../media/bulldog_background.jpg") !important; }
+
+.main-background {
+  background: url("../media/bulldog-jugando.jpg");
+  background-size: cover;
+  position: relative;
+  padding: 80px 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white; }
+  .main-background:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0; }
+    .main-background:before h3 {
+      color: rgba(255, 255, 255, 0.793); }
+
+@media (min-width: 1024px) {
+  .main-background {
+    background-attachment: fixed; } }
+
+.urgencia-veterinaria {
+  text-align: center;
+  color: #dd0909;
+  font-weight: bold;
+  font-size: 32px;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+  -webkit-transform: translate3d(0, 0, 0);
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap; }
+  .urgencia-veterinaria:first-of-type {
+    animation: showup 7s infinite; }
+  .urgencia-veterinaria:last-of-type {
+    width: 0px;
+    animation: reveal 7s infinite; }
+    .urgencia-veterinaria:last-of-type span {
+      margin-left: -255px;
+      animation: slidein 7s infinite; }
+
+@keyframes showup {
+  0% {
+    opacity: 0; }
+  20% {
+    opacity: 1; }
+  80% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes slidein {
+  0% {
+    margin-left: -255px; }
+  20% {
+    margin-left: -255px; }
+  35% {
+    margin-left: 0px; }
+  100% {
+    margin-left: 0px; } }
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    width: 0px; }
+  20% {
+    opacity: 1;
+    width: 0px; }
+  30% {
+    width: 255px; }
+  80% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    width: 255px; } }

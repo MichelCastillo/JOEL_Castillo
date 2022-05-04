@@ -331,11 +331,10 @@ main {
   /* ASIDE */
   
 aside {
-    text-align: center;
+  text-align: center;
 	background: linear-gradient(-45deg, #bfe92a, #ed1010, #0735dc, #23d5ab);
 	background-size: 400% 400%;
 	animation: aside-animated-gradient 12s ease infinite;
-	height: 100vh;
 }
 
 @keyframes aside-animated-gradient {
@@ -351,8 +350,7 @@ aside {
 }
 
 .card {
-    background-color: #223129;
-    height: 36rem;
+    height: auto;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -443,7 +441,7 @@ aside {
 .grid-container-aside {
     display: grid;
     grid-template-columns: .40fr 1fr;
-    grid-gap: 20px;
+    grid-gap: 50px;
     font-size: .9em;
 }
 
@@ -725,58 +723,98 @@ transition: .5s;
   transform: scale(1.10); 
 }
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+/* ///////////////////////////////////////////////////  */
 
-.urgencia-veterinaria{
-  text-align:center;
-  background:#ccc;
-  color:#555;
-  font-family:'Montserrat';
-  font-weight:300;
-  font-size:32px;
-  padding-top:40vh;
-  height:100vh;
-  overflow:hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-perspective: 1000;
-  -webkit-transform: translate3d(0,0,0);
-  display:inline-block;
-  overflow:hidden;
-  white-space:nowrap;
+/* GENERAL CONSIDERATIONS */
+
+.general-considerations .box {
+  padding: 50px 30px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  transition: all ease-in-out 0.3s;
+  background: #1a1814;
 }
 
-.urgencia-veterinaria:first-of-type {     
-  animation: showup 7s infinite;
+.general-considerations-image{
+  background-image: url("../media/bulldog_background.jpg")  !important;
 }
 
-.urgencia-veterinaria:last-of-type {
-  width:0px;
-  animation: reveal 7s infinite;
+.general-considerations .box span {
+  display: block;
+  font-size: 28px;
+  font-weight: 700;
+  color: #00E676;
 }
 
-.urgencia-veterinaria:last-of-type span {
-  margin-left:-255px;
-  animation: slidein 7s infinite;
+.general-considerations .box h4 {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0;
+  margin: 20px 0;
+  color: #00E676;
 }
 
-@keyframes showup {
-    0% {opacity:0;}
-    20% {opacity:1;}
-    80% {opacity:1;}
-    100% {opacity:0;}
+.general-considerations .box p {
+  color: #aaaaaa;
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
 }
 
-@keyframes slidein {
-    0% { margin-left:-255px; }
-    20% { margin-left:-255px; }
-    35% { margin-left:0px; }
-    100% { margin-left:0px; }
+.general-considerations .box:hover {
+  background: #00E676;
+  animation-delay: 5ms;
+  padding: 30px 30px 70px 30px;
+  box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
 
-@keyframes reveal {
-    0% {opacity:0;width:0px;}
-    20% {opacity:1;width:0px;}
-    30% {width:255px;}
-    80% {opacity:1;}
-    100% {opacity:0;width:255px;}
+.general-considerations .box:hover span, .general-considerations .box:hover h4, .general-considerations .box:hover p {
+  color: #fff;
+}
+
+.general-considerations .consideration-item {
+  display: none;
+  width: auto; 
+  max-height: 20cm; 
+}
+
+.general-considerations .box:hover .consideration-item {
+  display: block;
+  animation-delay: 10ms;
+}
+
+.general-considerations .box:hover .consideration-subtitle {
+  font-weight: bold;
+  animation-delay: 10ms;
+}
+
+/*--------------------------------------------------------------
+# MAIN
+--------------------------------------------------------------*/
+.main-background {
+  background: url("../media/bulldog-jugando.jpg");
+  background-size: cover;
+  position: relative;
+  padding: 80px 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
+}
+
+.main-background:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.main-background:before h3{
+  color: white;
+}
+
+@media (min-width: 1024px) {
+  .main-background {
+    background-attachment: fixed;
+  }
 }
