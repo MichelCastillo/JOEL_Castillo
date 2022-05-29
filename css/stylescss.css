@@ -942,3 +942,196 @@ section {
   100% {
     opacity: 0;
     width: 255px; } }
+
+/* FRENCHIES SECTION */
+.image-frenchies {
+  background-image: url("../media/bulldog-frenchies.jpg") !important; }
+
+/*--------------------------------------------------------------
+# ABOUT FRENCHIES SECTION
+--------------------------------------------------------------*/
+.about-frencies-justify {
+  text-align: justify;
+  text-justify: inter-word; }
+
+.about-frenchie .content h3 {
+  font-weight: 600;
+  font-size: 26px; }
+
+.about-frenchie .content ul {
+  list-style: none;
+  padding: 0; }
+  .about-frenchie .content ul li {
+    padding-left: 28px;
+    position: relative; }
+    .about-frenchie .content ul li + li {
+      margin-top: 10px; }
+  .about-frenchie .content ul i {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    font-size: 20px;
+    color: #00E678;
+    line-height: 1; }
+
+.about-frenchie .content p:last-child {
+  margin-bottom: 0; }
+
+.about-frenchie .content .btn-learn-more {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 5px;
+  transition: 0.3s;
+  line-height: 1;
+  color: #00E678;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  margin-top: 6px;
+  border: 2px solid #00E678; }
+  .about-frenchie .content .btn-learn-more:hover {
+    background: #00E678;
+    color: #fff;
+    text-decoration: none; }
+
+.center-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+
+/*--------------------------------------------------------------
+# CARDS SECTION
+--------------------------------------------------------------*/
+.cards {
+  padding-top: 0; }
+  .cards .card-box {
+    box-shadow: -10px -5px 40px 0 rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%; }
+    .cards .card-box i {
+      display: block;
+      font-size: 30px;
+      color: #00E678;
+      float: left; }
+    .cards .card-box span {
+      font-size: 42px;
+      line-height: 24px;
+      display: block;
+      font-weight: 700;
+      color: #0b2341;
+      margin-left: 50px; }
+    .cards .card-box p {
+      margin: 0;
+      font-family: "Raleway", sans-serif;
+      font-size: 14px; }
+    .cards .card-box a {
+      font-weight: 600;
+      display: block;
+      margin-top: 20px;
+      color: black;
+      font-size: 15px;
+      font-family: "Poppins", sans-serif;
+      transition: ease-in-out 0.3s; }
+      .cards .card-box a:hover {
+        color: #00E678;
+        font-size: large; }
+
+/*--------------------------------------------------------------
+# HELP SECTION
+--------------------------------------------------------------*/
+.help-frenchies {
+  padding: 80px 0;
+  background: #00E678; }
+  .help-frenchies h3 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 700; }
+  .help-frenchies p {
+    color: #fff; }
+  .help-frenchies .help-frenchies-btn {
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 10px 35px;
+    border-radius: 4px;
+    transition: 0.5s;
+    margin-top: 10px;
+    border: 2px solid #00E678;
+    color: #fff; }
+    .help-frenchies .help-frenchies-btn:hover {
+      background: #000101;
+      border: 2px solid #000000;
+      box-shadow: 6px -4px white;
+      transition-delay: 25ms; }
+
+/*--------------------------------------------------------------
+# SONS SECTION
+--------------------------------------------------------------*/
+.sons .member {
+  text-align: center;
+  margin-bottom: 20px;
+  background: #00E678;
+  position: relative;
+  overflow: hidden; }
+  .sons .member .member-info {
+    opacity: 0;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: 0.2s; }
+  .sons .member .member-info-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: bottom 0.4s; }
+    .sons .member .member-info-content h4 {
+      font-weight: 700;
+      margin-bottom: 2px;
+      font-size: 18px;
+      color: #fff; }
+    .sons .member .member-info-content span {
+      font-style: italic;
+      display: block;
+      font-size: 13px;
+      color: #fff; }
+  .sons .member .social {
+    position: absolute;
+    left: -50px;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    transition: left ease-in-out 0.3s;
+    background: #00E678;
+    text-align: center; }
+    .sons .member .social a {
+      transition: color 0.3s;
+      display: block;
+      color: #fff;
+      margin-top: 15px; }
+      .sons .member .social a:hover {
+        transform: scale(1.5);
+        transition: transform .35s;
+        transition-delay: 10ms; }
+  .sons .member:hover .member-info {
+    background: linear-gradient(0deg, #00E678 0%, #00e67716 20%, #00e67711 100%);
+    opacity: 1;
+    transition: 0.4s; }
+  .sons .member:hover .member-info-content {
+    bottom: 30px;
+    transition: bottom 0.4s; }
+  .sons .member:hover .social {
+    left: 0;
+    transition: left ease-in-out 0.3s; }
+
+/* PUGS SECTION */
+.image-pugs {
+  background-image: url("../media/bulldog-pugs.jpg") !important; }
